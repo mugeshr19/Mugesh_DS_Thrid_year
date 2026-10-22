@@ -1,0 +1,139 @@
+{
+  "model_name": "Gradient Boosting (HistGBM)",
+  "task": "Multi-Class Congestion Classification (15-min ahead)",
+  "timestamp": "2026-10-21T07:36:49.677306",
+  "training_samples": 32230,
+  "test_samples": 8060,
+  "classes": [
+    "Free Flow",
+    "Moderate",
+    "Heavy",
+    "Severe"
+  ],
+  "models_evaluated": {
+    "Dummy Baseline (Most Frequent)": {
+      "accuracy": 0.6241,
+      "macro_f1": 0.1921,
+      "weighted_f1": 0.4796,
+      "macro_precision": 0.156,
+      "macro_recall": 0.25
+    },
+    "Logistic Regression": {
+      "accuracy": 0.8656,
+      "macro_f1": 0.626,
+      "weighted_f1": 0.8778,
+      "macro_precision": 0.586,
+      "macro_recall": 0.8327
+    },
+    "Random Forest Classifier": {
+      "accuracy": 0.9035,
+      "macro_f1": 0.6966,
+      "weighted_f1": 0.9044,
+      "macro_precision": 0.8102,
+      "macro_recall": 0.6993
+    },
+    "Gradient Boosting (HistGBM)": {
+      "accuracy": 0.9021,
+      "macro_f1": 0.7729,
+      "weighted_f1": 0.9046,
+      "macro_precision": 0.7174,
+      "macro_recall": 0.8666
+    }
+  },
+  "best_metrics": {
+    "accuracy": 0.9021,
+    "macro_f1": 0.7729,
+    "weighted_f1": 0.9046,
+    "macro_precision": 0.7174,
+    "macro_recall": 0.8666
+  },
+  "confusion_matrix": [
+    [
+      4573,
+      457,
+      0,
+      0
+    ],
+    [
+      151,
+      2484,
+      118,
+      15
+    ],
+    [
+      5,
+      27,
+      192,
+      12
+    ],
+    [
+      0,
+      3,
+      1,
+      22
+    ]
+  ],
+  "classification_report": {
+    "Free Flow": {
+      "precision": 0.9670120532882216,
+      "recall": 0.9091451292246521,
+      "f1-score": 0.937186187109335,
+      "support": 5030.0
+    },
+    "Moderate": {
+      "precision": 0.836082127229889,
+      "recall": 0.8973988439306358,
+      "f1-score": 0.865656037637219,
+      "support": 2768.0
+    },
+    "Heavy": {
+      "precision": 0.617363344051447,
+      "recall": 0.8135593220338984,
+      "f1-score": 0.7020109689213894,
+      "support": 236.0
+    },
+    "Severe": {
+      "precision": 0.4489795918367347,
+      "recall": 0.8461538461538461,
+      "f1-score": 0.5866666666666667,
+      "support": 26.0
+    },
+    "accuracy": 0.9021091811414392,
+    "macro avg": {
+      "precision": 0.717359279101573,
+      "recall": 0.8665642853357581,
+      "f1-score": 0.7728799650836524,
+      "support": 8060.0
+    },
+    "weighted avg": {
+      "precision": 0.910138607294787,
+      "recall": 0.9021091811414392,
+      "f1-score": 0.9046042624489526,
+      "support": 8060.0
+    }
+  },
+  "feature_importance": {},
+  "feature_names": [
+    "average_speed",
+    "traffic_volume",
+    "occupancy_rate",
+    "traffic_density",
+    "speed_ratio",
+    "sin_hour",
+    "cos_hour",
+    "day_of_week",
+    "is_weekend",
+    "is_rush_hour",
+    "speed_lag1",
+    "speed_lag2",
+    "speed_lag3",
+    "volume_lag1",
+    "occupancy_lag1",
+    "speed_drop_rate",
+    "rolling_mean_speed_15m",
+    "rolling_std_speed_15m",
+    "vc_ratio",
+    "sensor_idx"
+  ],
+  "validation_strategy": "Strict Chronological Split (80% Train, 20% Test) without data leakage"
+}

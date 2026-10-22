@@ -1,0 +1,14 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.13.4
+pandas==2.3.3
+numpy==2.3.4
+scikit-learn==1.7.2
+joblib==1.5.2
+matplotlib==3.10.7
+seaborn==0.13.2
+requests==2.34.2
+websockets==16.0
+python-multipart==0.0.6
+pytest==8.4.1
+aiofiles==24.1.0

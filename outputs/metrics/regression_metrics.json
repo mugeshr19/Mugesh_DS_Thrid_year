@@ -1,0 +1,58 @@
+{
+  "model_name": "Gradient Boosting (HistGBM)",
+  "task": "Numerical Traffic Speed Forecasting (15-min horizon in km/h)",
+  "timestamp": "2026-10-21T07:36:49.677306",
+  "training_samples": 32230,
+  "test_samples": 8060,
+  "models_evaluated": {
+    "Persistence Baseline": {
+      "mae": 3.112,
+      "rmse": 4.146,
+      "r2": 0.9651
+    },
+    "Ridge Regression": {
+      "mae": 2.57,
+      "rmse": 3.502,
+      "r2": 0.9751
+    },
+    "Random Forest Regressor": {
+      "mae": 2.419,
+      "rmse": 3.242,
+      "r2": 0.9786
+    },
+    "Gradient Boosting (HistGBM)": {
+      "mae": 2.382,
+      "rmse": 3.179,
+      "r2": 0.9795
+    }
+  },
+  "best_metrics": {
+    "mae": 2.382,
+    "rmse": 3.179,
+    "r2": 0.9795
+  },
+  "feature_importance": {},
+  "feature_names": [
+    "average_speed",
+    "traffic_volume",
+    "occupancy_rate",
+    "traffic_density",
+    "speed_ratio",
+    "sin_hour",
+    "cos_hour",
+    "day_of_week",
+    "is_weekend",
+    "is_rush_hour",
+    "speed_lag1",
+    "speed_lag2",
+    "speed_lag3",
+    "volume_lag1",
+    "occupancy_lag1",
+    "speed_drop_rate",
+    "rolling_mean_speed_15m",
+    "rolling_std_speed_15m",
+    "vc_ratio",
+    "sensor_idx"
+  ],
+  "validation_strategy": "Strict Chronological Split (80% Train, 20% Test) without data leakage"
+}
